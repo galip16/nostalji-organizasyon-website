@@ -3,7 +3,8 @@ import logo from "../assets/logo.png";
 
 export default function Navbar() {
   return (
-    <header className="w-full bg-white shadow-md z-50 h-20 flex items-center">
+    //The reason for id="home" is to make the scroll link work properly
+    <header id="home" className="w-full bg-white shadow-md z-50 h-20 flex items-center">
       <div className="container mx-auto px-6 flex justify-between items-center">
         <a href="/" className="flex items-center gap-2">
           <img src={logo} alt="Organizasyon Logo" className="h-12 w-auto" />

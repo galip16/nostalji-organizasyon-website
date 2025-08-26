@@ -1,7 +1,6 @@
 export default function Hero() {
   return (
     <section
-      id="home"
       className="h-[calc(100vh-80px)] flex flex-col items-center justify-center bg-pink-100 text-center"
     >
       <h2 className="text-4xl md:text-6xl font-extrabold text-pink-600">
