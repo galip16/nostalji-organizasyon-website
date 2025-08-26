@@ -13,7 +13,7 @@ export default function Contact() {
           📞 +90 537 637 06 81
         </a>
         <a href="mailto:info@organizasyon.com" className="text-lg text-pink-600 hover:underline">
-          ✉️ info@organizasyon.com
+          ✉️ bursanostaljiorganizasyon@gmail.com
         </a>
         <a
           href="https://wa.me/905376370681"
