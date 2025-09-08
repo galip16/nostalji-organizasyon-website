@@ -10,11 +10,11 @@ export default function Navbar() {
         </a>
 
         <nav className="space-x-6">
-          <Link to="home" smooth duration={500} className="cursor-pointer text-gray-700 hover:text-pink-600">Anasayfa</Link>
-          <Link to="about" smooth duration={500} className="cursor-pointer text-gray-700 hover:text-pink-600">Hakkımızda</Link>
-          <Link to="products" smooth duration={500} className="cursor-pointer text-gray-700 hover:text-pink-600">Ürünler</Link>
-          <Link to="gallery" smooth duration={500} className="cursor-pointer text-gray-700 hover:text-pink-600">Galeri</Link>
-          <Link to="contact" smooth duration={500} className="cursor-pointer text-gray-700 hover:text-pink-600">İletişim</Link>
+          <Link to="home" smooth duration={500} className="cursor-pointer text-gray-900 hover:text-pink-600">Anasayfa</Link>
+          <Link to="about" smooth duration={500} className="cursor-pointer text-gray-900 hover:text-pink-600">Hakkımızda</Link>
+          <Link to="products" smooth duration={500} className="cursor-pointer text-gray-900 hover:text-pink-600">Ürünler</Link>
+          <Link to="gallery" smooth duration={500} className="cursor-pointer text-gray-900 hover:text-pink-600">Galeri</Link>
+          <Link to="contact" smooth duration={500} className="cursor-pointer text-gray-900 hover:text-pink-600">İletişim</Link>
         </nav>
       </div>
     </header>
