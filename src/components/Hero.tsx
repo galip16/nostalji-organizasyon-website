@@ -1,4 +1,12 @@
 export default function Hero() {
+
+    const scrollToContact = () => {
+        const contactSection = document.getElementById("contact");
+        if (contactSection) {
+            contactSection.scrollIntoView({behavior: "smooth"});
+        }
+    };
+
   return (
     <section className="relative h-[calc(100vh-80px)] flex items-center justify-center text-center">
       <video
@@ -20,9 +28,11 @@ export default function Hero() {
         <p className="mt-4 text-lg text-gray-800 drop-shadow">
           Düğünler, doğum günleri, şirket etkinlikleri için pamuk şeker, Osmanlı macunu, salep ve daha fazlası!
         </p>
-        <button className="mt-6 px-6 py-3 bg-pink-500 text-white rounded-full hover:bg-pink-600">
-          Hemen İletişime Geç
-        </button>
+  <button
+                onClick={scrollToContact}
+                className="mt-6 px-6 py-3 bg-pink-500 text-white rounded-full hover:bg-pink-600"
+            > Hemen İletişime Geç
+            </button>
       </div>
     </section>
   );
