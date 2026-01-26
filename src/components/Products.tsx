@@ -93,7 +93,7 @@ export default function Products() {
     return () => {
       if (intervalRef.current) clearInterval(intervalRef.current);
     };
-  }, [visibleCount, isMobile]);
+  }, [visibleCount, isMobile, startAutoSlide]);
 
   /* Controls */
   const handlePrev = () => {
