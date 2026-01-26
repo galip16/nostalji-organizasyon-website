@@ -2,15 +2,18 @@ import { Users, Sparkles, Cake, Building2 } from "lucide-react";
 
 export default function About() {
   return (
-    <section id="about" className="py-20 h-screen bg-white flex items-center justify-center">
+<section
+  id="about"
+  className="min-h-[calc(100vh-80px)] bg-white flex items-center justify-center py-16"
+>
       <div className="max-w-5xl mx-auto px-6 text-center">
         <h2 className="text-3xl md:text-4xl font-bold text-pink-600 mb-8">
           Biz Kimiz?
         </h2>
         <p className="text-lg text-gray-700 mb-12">
           Yıllardır düğünler, doğum günleri, şirket etkinlikleri ve anaokulu
-          organizasyonlarında <span className="font-semibold text-pink-500">nostaljik tatlar</span> sunuyoruz.  
-          Pamuk şeker, Osmanlı macunu, patlamış mısır, salep ve Osmanlı şerbeti gibi 
+          organizasyonlarında <span className="font-semibold text-pink-500">nostaljik tatlar</span> sunuyoruz.
+          Pamuk şeker, Osmanlı macunu, patlamış mısır, salep ve Osmanlı şerbeti gibi
           geleneksel lezzetleri modern bir dokunuşla sizlerle buluşturuyoruz.
         </p>
 

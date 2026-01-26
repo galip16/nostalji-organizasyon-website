@@ -1,6 +1,6 @@
 export default function Contact() {
   return (
-    <section id="contact" className="h-screen py-16 px-6 bg-gray-50 text-center flex flex-col justify-center">
+    <section id="contact" className="min-h-[calc(100vh-80px)] py-16 px-6 bg-gray-50 text-center flex flex-col justify-center">
       <h2 className="text-3xl md:text-4xl font-bold text-pink-600 mb-6">
         İletişim
       </h2>
