@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import pamuk from "../assets/pamuk-seker-1.jpg";
 import macun from "../assets/osmanli-macunu-1.png";
 import popcorn from "../assets/popcorn-1.jpg";
@@ -46,13 +46,12 @@ export default function Products() {
   const [visibleCount, setVisibleCount] = useState(3);
   const [isMobile, setIsMobile] = useState(false);
 
-  const intervalRef = useRef<NodeJS.Timer | null>(null);
+  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   /* Screen Size Listener */
   useEffect(() => {
     const handleResize = () => {
       const width = window.innerWidth;
-
       if (width < 640) {
         setIsMobile(true);
         setVisibleCount(1);
@@ -63,28 +62,26 @@ export default function Products() {
         setIsMobile(false);
         setVisibleCount(3);
       }
-
       setIndex(0);
     };
 
     handleResize();
     window.addEventListener("resize", handleResize);
-
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  /* Auto Slide */
-  const startAutoSlide = () => {
+  /* 2. Memoized Auto Slide Function */
+  const startAutoSlide = useCallback(() => {
     if (isMobile) return;
 
     if (intervalRef.current) clearInterval(intervalRef.current);
 
     intervalRef.current = setInterval(() => {
       setIndex((prev) =>
-        (prev + 1) % (products.length - visibleCount + 1)
+        prev >= products.length - visibleCount ? 0 : prev + 1
       );
     }, 3000);
-  };
+  }, [isMobile, visibleCount]);
 
   /* Start on Mount */
   useEffect(() => {
@@ -93,20 +90,20 @@ export default function Products() {
     return () => {
       if (intervalRef.current) clearInterval(intervalRef.current);
     };
-  }, [visibleCount, isMobile, startAutoSlide]);
+  }, [startAutoSlide]); 
 
   /* Controls */
-  const handlePrev = () => {
+  const handlePrev = useCallback(() => {
     setIndex((prev) => Math.max(prev - 1, 0));
     startAutoSlide();
-  };
+  }, [startAutoSlide]);
 
-  const handleNext = () => {
+  const handleNext = useCallback(() => {
     setIndex((prev) =>
       Math.min(prev + 1, products.length - visibleCount)
     );
     startAutoSlide();
-  };
+  },[startAutoSlide, visibleCount]);
 
   return (
     <section
@@ -153,9 +150,8 @@ export default function Products() {
               <div
                 className="flex transition-transform duration-700 ease-in-out"
                 style={{
-                  transform: `translateX(-${
-                    (index * 100) / visibleCount
-                  }%)`,
+                  transform: `translateX(-${(index * 100) / visibleCount
+                    }%)`,
                 }}
               >
                 {products.map((p) => (
