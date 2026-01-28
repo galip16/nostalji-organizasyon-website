@@ -20,8 +20,8 @@ export default function Navbar() {
         {/* Desktop Menu */}
         <nav className="hidden md:flex space-x-6">
           <NavItem to="home">Anasayfa</NavItem>
-          <NavItem to="about">Hakkımızda</NavItem>
           <NavItem to="products">Ürünler</NavItem>
+          <NavItem to="about">Hakkımızda</NavItem>
           <NavItem to="gallery">Galeri</NavItem>
           <NavItem to="contact">İletişim</NavItem>
         </nav>

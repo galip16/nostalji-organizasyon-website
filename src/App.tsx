@@ -11,8 +11,8 @@ export default function App() {
    <>
       <Navbar />
       <Hero />
-      <About />
       <Products />
+      <About />
       <Gallery />
       <Contact />
       <ScrollToTopButton />
