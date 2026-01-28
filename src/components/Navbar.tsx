@@ -1,6 +1,5 @@
 import { ReactNode, useState } from "react";
 import { Link } from "react-scroll";
-import logo from "../assets/logo.png";
 import { Menu, X } from "lucide-react";
 
 export default function Navbar() {
@@ -11,7 +10,7 @@ export default function Navbar() {
       <div className="container mx-auto px-6 h-20 flex justify-between items-center">
         {/* Logo */}
         <a href="/" className="flex items-center gap-2">
-          <img src={logo} alt="Organizasyon Logo" className="h-12 w-auto" />
+          <img src="/logo.png" alt="Organizasyon Logo" className="h-12 w-auto" />
           <span className="text-xl md:text-2xl font-serif font-semibold tracking-wide text-pink-600">
             Nostalji Şekerleme
           </span>
