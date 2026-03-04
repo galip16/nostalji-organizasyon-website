@@ -107,7 +107,7 @@ export default function Pricing() {
       servedPeople,
     };
 
-  }, [products, people, location, palyacoCount, extraStand, time]);
+  }, [products, people, location, palyacoCount, extraStand, time, locationFees, basePrices]);
 
   const toggleProduct = (key: keyof typeof products) => {
     setProducts({
