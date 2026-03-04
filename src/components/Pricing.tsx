@@ -2,6 +2,21 @@ import { useState, useMemo } from "react";
 
 type Breakdown = Record<string, number>;
 
+const locationFees = {
+    merkez: 0,
+    ilce: 1000,
+    disi: 2000,
+  };
+
+  const basePrices = {
+    pamuk: 4000,
+    macun: 3500,
+    popcorn: 4000,
+    serbet: 3000,
+    salep: 2500,
+    palyaco: 2000,
+  };
+
 export default function Pricing() {
 
   const [time, setTime] = useState("aksam");
@@ -22,20 +37,7 @@ export default function Pricing() {
 
   const [palyacoCount, setPalyacoCount] = useState(1);
 
-  const locationFees = {
-    merkez: 0,
-    ilce: 1000,
-    disi: 2000,
-  };
-
-  const basePrices = {
-    pamuk: 4000,
-    macun: 3500,
-    popcorn: 4000,
-    serbet: 3000,
-    salep: 2500,
-    palyaco: 2000,
-  };
+  
 
   const calc = useMemo(() => {
 
@@ -107,7 +109,7 @@ export default function Pricing() {
       servedPeople,
     };
 
-  }, [products, people, location, palyacoCount, extraStand, time, locationFees, basePrices]);
+  }, [products, people, location, palyacoCount, extraStand, time]);
 
   const toggleProduct = (key: keyof typeof products) => {
     setProducts({
