@@ -5,6 +5,7 @@ import Products from './components/Products';
 import Gallery from './components/Gallery';
 import Contact from './components/Contact';
 import ScrollToTopButton from './components/ScrollToTopButton';
+import Pricing from './components/Pricing';
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
       <About />
       <Gallery />
       <Contact />
+      <Pricing/>
       <ScrollToTopButton />
     </>
   );

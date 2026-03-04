@@ -23,6 +23,7 @@ export default function Navbar() {
           <NavItem to="about">Hakkımızda</NavItem>
           <NavItem to="gallery">Galeri</NavItem>
           <NavItem to="contact">İletişim</NavItem>
+          <NavItem to="pricing">Fiyat</NavItem>
         </nav>
 
         {/* Mobile Button */}
@@ -46,6 +47,7 @@ export default function Navbar() {
           <MobileItem to="products" onClick={() => setOpen(false)}>Ürünler</MobileItem>
           <MobileItem to="gallery" onClick={() => setOpen(false)}>Galeri</MobileItem>
           <MobileItem to="contact" onClick={() => setOpen(false)}>İletişim</MobileItem>
+          <MobileItem to="pricing" onClick={() => setOpen(false)}>Fiyat</MobileItem>
         </nav>
       </div>
     </header>
