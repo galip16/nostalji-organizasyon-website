@@ -23,7 +23,6 @@ export default function Navbar() {
           <NavItem to="about">Hakkımızda</NavItem>
           <NavItem to="gallery">Galeri</NavItem>
           <NavItem to="contact">İletişim</NavItem>
-          <NavItem to="pricing">Fiyat</NavItem>
         </nav>
 
         {/* Mobile Button */}
