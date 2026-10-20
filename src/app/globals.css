@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Nunito Variable", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-display: "Fraunces Variable", Georgia, "Times New Roman", serif;
+
+  --color-cream: #fff8f0;
+  --color-paper: #fffdf9;
+  --color-ink: #2a1a22;
+  --color-muted: #6b5560;
+
+  --color-berry-50: #fff1f6;
+  --color-berry-100: #ffe0ec;
+  --color-berry-200: #ffc2d9;
+  --color-berry-500: #e0357a;
+  --color-berry-600: #d6286c;
+  --color-berry-700: #b01e57;
+  --color-berry-900: #4a0f27;
+
+  --color-sky-brand: #3ab6d9;
+  --color-gold: #c8902e;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5.5rem;
+}
+
+body {
+  background: var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-sky-brand);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+details > summary {
+  list-style: none;
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Hero videosu kullanıcı hareketi azalt dediyse durağan poster kalsın */
+@media (prefers-reduced-motion: reduce) {
+  .hero-video {
+    display: none;
+  }
+}
