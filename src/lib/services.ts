@@ -58,7 +58,7 @@ export const SERVICES: Service[] = [
     name: "Osmanlı Macunu",
     h1: "Bursa'da Osmanlı Macunu İkramı",
     summary:
-      "Geleneksel renkli macunlar, çubuklarıyla birlikte misafirlerinize yüzyıllık bir lezzet yaşatır.",
+      "Geleneksel renkli macunlar, misafirlerinize yüzyıllık bir lezzet yaşatır.",
     image: "/images/osmanli-macunu-2.webp",
     imageWidth: 786,
     imageHeight: 577,
